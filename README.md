@@ -5,3 +5,6 @@ Convolutional Neural Network is proved to be an effective mechanism to perform o
 
 ## Architecture
 ![Architecture](images/architecture.png "Architecture of the Recurrent Attention Model")
+
+## Training
+![Training](images/training_process.png "Training Procedure of the Recurrent Attention Model")
