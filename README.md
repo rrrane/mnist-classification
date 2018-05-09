@@ -5,5 +5,3 @@ Convolutional Neural Network is proved to be an effective mechanism to perform o
 
 ## Architecture
 ![Architecture](images/architecture.png "Architecture of the Recurrent Attention Model")
-
-The architecture consists of Glimpse Sensor, Glimpse Network, Core Network, Action Network and Location Network.
