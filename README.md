@@ -39,4 +39,4 @@ Here, the image data constitutes partially observable environment. Glimpse Senso
 ## Training
 ![Training](images/training_process.png "Training Procedure of the Recurrent Attention Model")
 --
-Unlike other supervised learning problems, here we have two objective functions to optimize. During training, the goal is to minimize standard cross-entropy loss associated with action network while maximize expected reward associated with the location network. The cross-entropy loss is minimized using back-propagation through Action Network, Core Network and Glimpse Network (red arrow) and the expected reward is maximized using Policy Gradient on Location Network (blue arrow).
+Unlike other supervised learning problems, here we have two objective functions to optimize. During training, the goal is to minimize standard cross-entropy loss associated with action network while maximizing expected reward associated with the location network. The cross-entropy loss is minimized using back-propagation through Action Network, Core Network and Glimpse Network (red arrow) and the expected reward is maximized using Policy Gradient on Location Network (blue arrow).
