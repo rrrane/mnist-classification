@@ -34,6 +34,9 @@ The typical Reinforcement Learning framework consists of
 
 At any particular timestep, the environment is in a certain state. The agent through its sensors observes this state and based on its policy decides the action. After taking this action, environment goes in the next state and agent receives some reward. The objective is to decide a policy that would maximize this reward. The detailed description of Reinforcement Learning framework can be found at [(R. Sutton & A. Barto, 1998)](http://incompleteideas.net/book/bookdraft2017nov5.pdf).
 
+Here, the image data constitutes partially observable environment. Glimpse Sensor, Glimpse Network, Core Network, Action Network and Location Network together form the agent. The class-prediction and next glimpse location together form an action. Ideally, the policy is the joint probability distribution of class-prediction and next glimpse location. However, for simplicity we assume these two events to be independent of each other and treat them separately for training. After taking an action, the agent receives positive reward for correct class-prediction and zero or negative reward for the wrong prediction. We can set negative reward if we want agent to quickly arrive at correct solution.
+
 ## Training
 ![Training](images/training_process.png "Training Procedure of the Recurrent Attention Model")
 --
+Unlike other supervised learning problems, here we have two objective functions to optimize. During training, the goal is to minimize standard cross-entropy loss associated with action network while maximize expected reward associated with the location network. The cross-entropy loss is minimized using back-propagation through Action Network, Core Network and Glimpse Network (red arrow) and the expected reward is maximized using Policy Gradient on Location Network (blue arrow).
